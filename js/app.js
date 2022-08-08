@@ -4,10 +4,13 @@
 const numCom = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+
 // VARIABLES
 let dificultad = prompt("Seleccione dificultad: \n 1 = facil\n 2= normal \n 3= dificil \n 4= legendario");
-let vidas = 0;
-let aciertos = false;
+
+// FUNCION QUE CONTIENE EL JUEGO
+const game = (vidas, aciertos) => {
 
 if (dificultad == 1) {
     let numeroAleatorio = numCom(1, 10);
@@ -83,3 +86,7 @@ else if (dificultad == 2) {
         }
     }
 }
+}
+// SE EJECUTA LA FUNCION JUEGO
+
+game(0,false)
